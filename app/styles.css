@@ -1,0 +1,229 @@
+.highlightComplexToggle-sentences .complex-sentence:not(.swapped-inplace):not(.swapped-popup):not(.swapped-side),
+.highlightComplexToggle-words .complex-word:not(.swapped-inplace):not(.swapped-popup):not(.swapped-side) {
+  background-color: #dadfe1;
+}
+
+.highlightComplexToggle-sentences.swapped-side .complex-sentence,
+.highlightComplexToggle-sentences :is(.swapped-inplace, .swapped-popup, .swapped-side) .complex-sentence,
+.highlightComplexToggle-words :is(.swapped-inplace, .swapped-popup, .swapped-side) .complex-word {
+  background-color: transparent !important;
+}
+
+.highlightReplacedToggle-sentences.swapped-side .complex-sentence,
+.highlightReplacedToggle-sentences .complex-sentence.swapped-inplace,
+.highlightReplacedToggle-sentences .complex-sentence.swapped-inplace  > .replacement,
+.highlightReplacedToggle-sentences .swapped-popup.complex-sentence,
+.highlightReplacedToggle-sentences .swapped-popup .complex-sentence,
+.highlightReplacedToggle-sentences .swapped-side .complex-sentence,
+.highlightReplacedToggle-sentences .swapped-side.complex-sentence,
+.highlightReplacedToggle-words.swapped-side .complex-word,
+.highlightReplacedToggle-words .complex-word.swapped-inplace > .replacement,
+.highlightReplacedToggle-words .swapped-side .complex-word,
+.highlightReplacedToggle-words .complex-word.swapped-side,
+.highlightReplacedToggle-words .swapped-popup.complex-word,
+.highlightReplacedToggle-words .swapped-popup .complex-word {
+  background-color: #ffffcc !important;
+}
+
+.highlightReplacedToggle-sentences .highlight-mapped.swapped-side .complex-sentence,
+.highlightReplacedToggle-sentences .highlight-mapped.swapped-side.complex-sentence,
+.highlightReplacedToggle-sentences .swapped-side:hover .complex-sentence,
+.highlightReplacedToggle-sentences .swapped-side.complex-sentence:hover,
+.highlightReplacedToggle-words .highlight-mapped.swapped-side.complex-sentence,
+.highlightReplacedToggle-words .highlight-mapped.complex-word.swapped-side,
+.highlightReplacedToggle-words .complex-word.swapped-side:hover,
+.highlightReplacedToggle-words .swapped-side:hover .complex-word {
+  /* background-color: rgba(#ffffcc, 0.82) !important; */
+  /* box-shadow: 0 0 50px #ccc; */
+  opacity: 0.5;
+}
+
+.link {
+  background: none;
+  border: none;
+}
+
+/* .paragraph {
+   text-align: justify;
+} */
+
+.complex-word,
+.complex-paragraph,
+.complex-document {
+  position: relative;
+}
+
+.complex-sentence span:not(.replacement) {
+  display: inline-block;
+}
+
+.complex-paragraph,
+.complex-document {
+  width: 100%;
+}
+
+.tooltip1 {
+  content: attr(data-text);
+  border-radius: 8px;
+  position: absolute;
+  font-family: arial;
+  background: #fff9de;
+  color: #000000;
+  font-size: 1em;
+  width: max-content;
+  line-height: 1.25em;
+  bottom: 100%;
+  left: 0em;
+  max-width: 100%;
+  z-index: 2;
+  padding: .5rem 1rem;
+  box-shadow: 0 0 5px #fce68d;
+  pointer-events: none;
+}
+
+.complex-word>.tooltip1 {
+  max-width: max-content;
+}
+
+.complex-document>.tooltip1 {
+  bottom: auto;
+}
+
+/* .sidetip {
+  content: attr(data-text);
+  border-radius: 8px;
+  position: absolute;
+  font-family: arial;
+  background: #fff9de;
+  color: #000000;
+  font-size: 12px;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  z-index: 999;
+  padding: 6px 12px 6px 12px;
+  box-shadow: inset 0 0 5px #fce68d;
+} */
+
+.clickable-pointer {
+  cursor: pointer;
+}
+
+.clickable-pointer:hover {
+  color: rgba(0,0,0,0.5);
+}
+
+#modal1-container {
+  position: fixed;
+  width: max-content;
+  width: 20%;
+  max-height: 100%;
+  top: 0px;
+  right: 0px;
+  overflow-x: visible;
+  overflow-y: scroll;
+  height: auto;
+  z-index: 1000;
+}
+
+#modal1-container::-webkit-scrollbar {
+  width: 1.5rem;
+  position: fixed;
+}
+
+#modal1-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#modal1-container::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+.modal1 {
+  display: block;
+  border-radius: 8px !important;
+  position: relative;
+  color: #000000;
+  max-width: 90%;
+  width: max-content;
+  max-height: 90%;
+  top: 0px;
+  right: 0px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.74);
+  margin: 1rem 1rem 1rem auto;
+}
+
+.modal1:hover, .modal1.highlight {
+  cursor: pointer;
+  background: #f7f7f7;
+}
+
+.modal1-content {
+  position: relative;
+  font-family: arial;
+  font-size: 16px;
+  max-width: 100%;
+  width: max-content;
+  /* content: attr(data-text); */
+  height: max-content;
+}
+
+/* The Close Button */
+.close {
+  position: relative;
+  top: -1rem;
+  float: right;
+  display: inline;
+  color: rgb(0, 0, 0);
+  /* position: absolute; */
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 1rem;
+}
+
+.close::after {
+  content: "\00d7";
+  display: inline;
+  margin: 1rem 0;
+}
+
+.close:hover,
+.close:focus {
+  opacity: 0.5;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  padding: 0;
+}
+
+button:hover {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+/* Added */
+

@@ -1,0 +1,42 @@
+  .sb10:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #00bfb6;
+    right: 50%;
+    top: -23px;
+  }
+  
+  .sb10:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    right: 50%;
+    top: -18px;
+  }
+
+  .box2 {
+    width: 300px;
+    margin: 50px auto;
+    border: 4px solid #00bfb6;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #00bfb6;
+    font-family: arial;
+    position: relative;
+  }
+
+  .datalist{
+      display: inline;
+      background-color: gray;
+  }

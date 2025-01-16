@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Integrated ATS and Video Popup System",
+  "version": "1.1",
+  "permissions": ["activeTab", "storage", "scripting", "declarativeContent", "tabs"],
+  "host_permissions": [
+      "<all_urls>",
+      "http://127.0.0.1:8000/decomplexify/", 
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["thirdParty/jquery-3.6.0.min.js", "content.js"],
+      "css": ["styles.css"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["mediaMap.json", "*.mp4"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'self'"
+  }
+}

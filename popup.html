@@ -1,0 +1,121 @@
+<html>
+  <head>
+    
+    <!-- CSS only -->
+    <link href="thirdParty/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css" />
+    <!-- JavaScript Bundle with Popper -->
+    
+    <script src="popup.js"></script>
+    <script src="thirdParty/jquery-3.6.0.min.js"></script>
+    <script src="thirdParty/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- System Selector -->
+      <div class="option-slider">
+        <h1>System Selector</h1>
+        <div id="systemToggle" class="form-check form-switch switch">
+          <span class="toggle-label">Text-Based System (Default) </span>
+          <input class="form-check-input" type="checkbox" id="toggleSwitch">
+          <span class="toggle-label">Video-Based System</span>
+        </div>
+      </div>
+  
+
+      <div class="option-slider">
+        <div class="form-check form-switch switch setting-node do-not-disable" data-resets="true" id="enabled">
+          <input class="form-check-input" type="checkbox" role="switch">
+          <label class="form-check-label" for="enabled"></label>
+        </div>
+      </div>
+
+      <div class="option-slider">
+        <h1>Simplification Type</h1>
+        <div class="btn-group setting-node" role="group" aria-label="Basic radio toggle button group" data-resets="true"id="simpSetting">
+          <input type="radio" class="btn-check" name="type" id="lexical" autocomplete="off">
+          <label class="btn btn-outline-primary" for="lexical">Lexical</label>
+
+          <input type="radio" class="btn-check" name="type" id="syntactic_and_lexical" autocomplete="off">
+          <label class="btn btn-outline-primary" for="syntactic_and_lexical">Both</label>
+
+          <input type="radio" class="btn-check" name="type" id="syntactic" autocomplete="off">
+          <label class="btn btn-outline-primary" for="syntactic">Syntactic</label>
+        </div>
+      </div>
+
+
+     <!-- Placeholder for SVG arrow definitions -->
+     <svg style="position: absolute; top: 0; left: 0; width: 0; height: 0;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="black"></polygon>
+            </marker>
+        </defs>
+    </svg>
+
+
+      <div class="option-slider">
+        <h1>Quantity</h1>
+        <div class="btn-group setting-node" role="group" aria-label="Basic radio toggle button group" data-resets="true"id="howMuchSetting">
+          <input type="radio" class="btn-check" name="quantity" id="Word" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Word">Words</label>
+      
+          <input type="radio" class="btn-check" name="quantity" id="Sentence" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Sentence">Sentences</label>
+      
+          <input type="radio" class="btn-check" name="quantity" id="Paragraph" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Paragraph">Paragraphs</label>
+
+          <input type="radio" class="btn-check" name="quantity" id="Document" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Document">Document</label>
+        </div>
+      </div>
+
+      <div class="option-slider">
+        <h1>Highlight Complex</h1>
+        <div class="form-check form-switch switch setting-node" data-resets="false" id="highlightComplexToggle">
+          <input class="form-check-input" type="checkbox" role="switch">
+          <label class="form-check-label" for="enabledInput"></label>
+        </div>
+      </div>
+
+      <div class="option-slider">
+        <h1>Location</h1>
+        <div class="btn-group setting-node" role="group" aria-label="Basic radio toggle button group" data-resets="true"id="whereToSetting">
+          <input type="radio" class="btn-check" name="location" id="InPlace" autocomplete="off">
+          <label class="btn btn-outline-primary" for="InPlace">In Place</label>
+      
+          <input type="radio" class="btn-check" name="location" id="Popup" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Popup">Pop-up</label>
+      
+          <input type="radio" class="btn-check" name="location" id="Side" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Side">Side</label>
+        </div>
+      </div>
+
+      <div class="option-slider">
+        <h1>Highlight Replaced</h1>
+        <div class="form-check form-switch switch setting-node" data-resets="false" id="highlightReplacedToggle">
+          <input class="form-check-input" type="checkbox" role="switch">
+          <label class="form-check-label" for="enabledInput"></label>
+        </div>
+      </div>
+
+      <div class="option-slider">
+        <h1>Duration</h1>
+        <div class="btn-group setting-node" role="group" aria-label="Basic radio toggle button group" data-resets="true"id="howLongSetting">
+          <input type="radio" class="btn-check" name="duration" id="Temporary" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Temporary">Temporary</label>
+      
+          <input type="radio" class="btn-check" name="duration" id="Manual" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Manual">Manual</label>
+      
+          <input type="radio" class="btn-check" name="duration" id="Permanent" autocomplete="off">
+          <label class="btn btn-outline-primary" for="Permanent">Permanent</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

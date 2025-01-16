@@ -1,0 +1,101 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 0;
+  min-width: 500px;
+}
+
+.container {
+  padding-top: 1em;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.option-slider {
+  padding-bottom: 1em;
+}
+
+.option-slider h1 {
+  font-size: 1.5em;
+}
+
+.switch {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+}
+
+.switch input {
+  margin: 0 !important;
+  width: 4em !important;
+  height: 2em;
+
+}
+
+.hide {
+  display: none;
+}
+
+.disabled, .btn-check:disabled+.btn {
+  opacity: 0.3;
+}
+
+.feedback-tooltip {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* This is added new
+*/
+.video-container {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 4px;
+  width: 300px;
+  height: 200px;
+}
+
+
+
+.video-close {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: red; 
+  color: white; 
+  font-size: 1.5rem; 
+  border: none; 
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  z-index: 1100;
+}
+
+.video-close:hover {
+  background-color: darkred;
+  opacity: 0.7;
+}
+
